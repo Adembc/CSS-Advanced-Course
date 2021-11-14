@@ -43,15 +43,15 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 }
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-.logo-box .logo {
+.header__logo {
   height: 3.5rem;
 }
-.text-box{
+.header__text-box{
   position: absolute;
   top: 40%;
   left: 50%;
@@ -68,7 +68,7 @@ body {
   -webkit-backface-visibility: hidden;
 margin-bottom: 6rem;
 }
- .primary-heading-main {
+ .primary-heading--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -76,13 +76,13 @@ margin-bottom: 6rem;
     animation: moveInLeft 1s ease-in-out;
     -webkit-animation: moveInLeft 1s ease-out;
 }
-.primary-heading-sub {
+.primary-heading--sub {
     display: block;
     font-size: 2rem;
     letter-spacing: 1.75rem;
     font-weight: 700;
     animation: moveInRight 1s ease-in-out;
-    -webkit-animation: moveInRight 1s ease-out;
+    -webkit-animation: moveInRight 1s ease-in-out;
 }
 
 @keyframes moveInLeft{
@@ -153,7 +153,7 @@ margin-bottom: 6rem;
     -o-transition: all .2s;
     position: relative;
 }
-.btn-white{
+.btn--white{
     background-color: #fff;
     color: #777;
 }
@@ -193,7 +193,7 @@ margin-bottom: 6rem;
   -ms-transition: all .4s;
   -o-transition: all .4s;
 }
-.btn-white::after{
+.btn--white::after{
   background-color: #fff;
 }
 .btn:hover::after{
@@ -204,9 +204,9 @@ margin-bottom: 6rem;
   -o-transform: scale(1.5);
   opacity: 0;
 }
-.btn-animated{
+.btn--animated{
   animation: moveInBottom .5s .75s ease-out backwards;
-  -webkit-animation: moveInBottom .5s .75s ease-out backwards;
+  -webkit-animation:  moveInBottom .5s .75s ease-out backwards;
 }
 @keyframes moveInBottom{
   0%{
