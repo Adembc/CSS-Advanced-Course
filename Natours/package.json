@@ -1,0 +1,17 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass Sass/main.scss CSS/style.css -w"
+  },
+  "author": "Adem",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
