@@ -1,0 +1,35 @@
+.feature-box{
+    background-color: rgba($white,.8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: 0 1.5rem  4rem rgba(0,0,0,.15);
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    &__icon{
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        color: transparent;
+        background-image: linear-gradient(to right , $light-green,$dark-green);
+        background-clip: text;
+        -webkit-background-clip: text;
+ 
+    }
+    &:hover{
+        transform: translateY(-1.5rem) scale(1.05);
+        -webkit-transform: translateY(-1.5rem) scale(1.05);
+        -moz-transform: translateY(-1.5rem) scale(1.05);
+        -ms-transform: translateY(-1.5rem) scale(1.05);
+        -o-transform: translateY(-1.5rem) scale(1.05);
+        box-shadow: 0 2.5rem  2rem rgba(0,0,0,.15);
+}
+
+}
