@@ -5,7 +5,7 @@
 }
 .features-section{
     padding: 20rem 0 ;
-    background-image: linear-gradient(        to right bottom,        rgba($light-green, 0.8),        rgba($dark-green, 0.8)      ),      url("../img/nat-4.jpg");
+    background-image: linear-gradient(to right bottom,rgba($light-green, 0.8),rgba($dark-green, 0.8)), url("../img/nat-4.jpg");
     background-size: cover;
     margin-top: -12rem;
     transform: skewY(-7deg);
@@ -13,6 +13,7 @@
     -moz-transform: skewY(-7deg);
     -ms-transform: skewY(-7deg);
     -o-transform: skewY(-7deg);
+
      & > *{
      transform: skewY(7deg);
      -webkit-transform: skewY(7deg);
@@ -21,4 +22,9 @@
      -o-transform: skewY(7deg);
     }
 
+}
+.tours-section{
+        background-color:  $light-grey-1;
+        padding: 25rem 0 50rem;
+        margin-top: -12rem;
 }

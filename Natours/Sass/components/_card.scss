@@ -1,0 +1,66 @@
+.card{
+    
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+    
+   
+    &__side{
+        font-size: 2rem;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transition: all .8s ease;
+        -webkit-transition: all .8s ease;
+        -moz-transition: all .8s ease;
+        -ms-transition: all .8s ease;
+        -o-transition: all .8s ease;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+        &--front{
+           background-color: $white;
+        }
+        &--back{
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+        
+            &-1{
+                background-image: linear-gradient(to right bottom , $light-orange , $dark-orange);
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom , $light-green , $dark-green);
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom , $light-blue , $dark-blue);
+            }
+} 
+  
+    }
+    &:hover &__side--front{
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+}
+    &:hover &__side--back{
+        transform: rotateY(0);
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        -o-transform: rotateY(0);
+    }       
+}
+
