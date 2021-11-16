@@ -1,0 +1,50 @@
+.composition{
+    position: relative;
+
+    &__photo{
+    width: 55%;
+    box-shadow:  0 1.5rem 4rem rgba(0,0,0,.4);
+    outline-offset: 2rem;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    transition: all .2s;
+    position: absolute;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    &--left{
+        left: 0;
+        top: -2rem;
+    }
+    &--center{
+        right: 0;
+        top: 2rem;
+    }
+    &--right{
+        left: 25%;
+        top: 10rem;
+    }
+    &:hover{
+        z-index: 1;
+        transform: scale(1.1) translateY(-.5rem);
+        -webkit-transform: scale(1.1) translateY(-.5rem);
+        -moz-transform: scale(1.1) translateY(-.5rem);
+        -ms-transform: scale(1.1) translateY(-.5rem);
+        -o-transform: scale(1.1) translateY(-.5rem);
+        box-shadow:  0 2.5rem 4rem rgba(0,0,0,.5);
+        outline: 1.5rem solid $meduim-green;
+}
+}
+&:hover &__photo:not(:hover){
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+    
+}

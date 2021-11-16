@@ -1,0 +1,33 @@
+.row{
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    &:not(:last-child){
+        margin-bottom: $row-gap;
+    }
+    @include clearfix;
+    [class^="col-"]{
+        float: left;
+        &:not(:last-child){
+            margin-right: $col-gap;
+        }
+    }
+    .col-1-of-2{   
+      width: calc((100% - #{$col-gap}) / 2);
+    }
+    .col-1-of-3{   
+      width: calc((100% - #{$col-gap} *2 ) / 3);
+    }
+    .col-1-of-4{   
+      width: calc((100% - #{$col-gap} *3 ) / 4);
+    } 
+    .col-2-of-3{
+        width: calc( ((100% - #{$col-gap} *2 ) / 3)* 2 + #{$col-gap});
+    }
+    .col-2-of-4{
+        width: calc( ((100% - #{$col-gap} *3) / 4)* 2 + #{$col-gap});
+    }
+    .col-3-of-4{
+        width: calc(((100% - #{$col-gap} *3 ) / 4) * 3 + 2 *#{$col-gap}) ;
+    }
+}
