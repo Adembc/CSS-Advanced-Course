@@ -1,4 +1,5 @@
 .btn{
+    &,
     &:link,
     &:visited{
       font-size: $main-font-size;
@@ -16,6 +17,8 @@
       -moz-transition: all .2s;
       -ms-transition: all .2s;
       -o-transition: all .2s;
+      border: none;
+      cursor: pointer;
     }
 
     &--white{
@@ -55,7 +58,8 @@
       }
 
     }
-    &:active{
+    &:active,
+    &:focus{
       transform: translateY(-.1rem);
       -webkit-transform: translateY(-.1rem);
       -moz-transform: translateY(-.1rem);
