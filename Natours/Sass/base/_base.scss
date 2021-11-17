@@ -8,6 +8,7 @@
   html{
     /* font-size: 10px; to deal easily with rem */
     font-size: 62.5%; /* the same as 10px */ 
+    scroll-behavior: smooth;
   }
   a{
     text-decoration: none;
