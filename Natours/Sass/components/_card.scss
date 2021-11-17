@@ -3,11 +3,10 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem;
+    height: 52rem;
     
    
     &__side{
-        font-size: 2rem;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -25,6 +24,7 @@
         -moz-border-radius: 3px;
         -ms-border-radius: 3px;
         -o-border-radius: 3px;
+        overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
         &--front{
            background-color: $white;
@@ -35,7 +35,6 @@
             -moz-transform: rotateY(180deg);
             -ms-transform: rotateY(180deg);
             -o-transform: rotateY(180deg);
-        
             &-1{
                 background-image: linear-gradient(to right bottom , $light-orange , $dark-orange);
             }
@@ -45,15 +44,15 @@
             &-3{
                 background-image: linear-gradient(to right bottom , $light-blue , $dark-blue);
             }
-} 
+        } 
   
     }
     &:hover &__side--front{
-        transform: rotateY(180deg);
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-        -o-transform: rotateY(180deg);
+        transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
 }
     &:hover &__side--back{
         transform: rotateY(0);
@@ -61,6 +60,94 @@
         -moz-transform: rotateY(0);
         -ms-transform: rotateY(0);
         -o-transform: rotateY(0);
-    }       
+    }   
+    
+    &__image{
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-background-blend-mode: screen;
+        clip-path: polygon(0 0 , 100% 0 , 100% 85% , 0 100%);
+        &--1{
+            background-image:   linear-gradient(to right bottom , $light-orange , $dark-orange) , 
+            url("../img/nat-5.jpg");
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom , $light-green , $dark-green) ,
+            url("../img/nat-6.jpg");
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom , $light-blue , $dark-blue) , 
+            url("../img/nat-7.jpg");
+        }
+    }
+    &__heading{
+        font-size: 2.8rem;
+        color: $white;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        position: absolute;
+        right: 2rem;
+        top: 12rem;
+        width: 75%;
+    }
+    &__heading-span{
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &-1{
+            background-image: linear-gradient(to right bottom ,rgba($light-orange,.85),rgba($dark-orange,.85));
+        }
+        &-2{
+            background-image: linear-gradient(to right bottom ,rgba($light-green,.85),rgba($dark-green,.85));
+        }
+        &-3{
+            background-image: linear-gradient(to right bottom ,rgba($light-blue,.85),rgba($dark-blue,.85));
+        }
+    }
+    &__details{
+        padding: 3rem;
+
+        ul{
+            width: 80%;
+            margin: 0 auto;
+            list-style: none;
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                letter-spacing: 1px;
+                &:not(:last-child){
+                    border-bottom: 1px solid #eee;
+                }
+            }
+        }
+    }
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        text-align: center;
+        width: 90%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+    }
+    &__price-box{
+        color: $white;
+        margin-bottom: 8rem;
+    }
+    &__price-text{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+    &__price-number{
+        font-size: 6rem;
+        font-weight: 100;
+    }
 }
 

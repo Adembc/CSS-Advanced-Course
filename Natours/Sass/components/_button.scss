@@ -27,6 +27,15 @@
       }
 
     }
+    &--green{
+      background-color: $meduim-green;
+      color: $white;
+
+      &::after{
+        background-color: $meduim-green;
+      }
+
+    }
 
     &:hover{
       transform: translateY(-.3rem);
