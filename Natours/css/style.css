@@ -74,6 +74,9 @@ html {
 a {
   text-decoration: none; }
 
+ul {
+  list-style: none; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -421,8 +424,7 @@ body {
     padding: 3rem; }
     .card__details ul {
       width: 80%;
-      margin: 0 auto;
-      list-style: none; }
+      margin: 0 auto; }
       .card__details ul li {
         text-align: center;
         font-size: 1.5rem;
@@ -708,6 +710,47 @@ body {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #f7f7f7; }
+  .footer__logo-box {
+    text-align: center; }
+  .footer__logo {
+    width: 15rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: inherit;
+    background-color: #333;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; }
+  .footer__link:hover, .footer__link:active {
+    color: #55c57a;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+    transform: scale(1.25) rotate(5deg); }
+  .footer__copyright {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    display: inline-block;
+    width: 80%;
+    float: right; }
 
 .about-section {
   background-color: #f7f7f7;
