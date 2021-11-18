@@ -57,14 +57,7 @@
         -o-transition: all .8s cubic-bezier(0.86, -0.55, 0.265, 1.55);
 }
     &__list{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        -webkit-transform: translate(-50%,-50%);
-        -moz-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-        -o-transform: translate(-50%,-50%);
+        @include center-x-y;
         text-align: center;
 }
     &__item{
