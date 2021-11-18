@@ -8,5 +8,5 @@
 @mixin bordertop {
         border-top: 1px solid $dark-grey;
         padding-top: 2rem;
-        display: inline-block;
+        width: fit-content;
 }
