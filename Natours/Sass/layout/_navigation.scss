@@ -20,7 +20,14 @@
         box-shadow: 0 1rem 3rem rgba(0,0,0,.15);
         text-align: center;
         line-height: 7rem;
-       
+     @include respond(tab-small){
+        top: 4rem;
+        right: 4rem;
+     }  
+     @include respond(phone){
+        top: 3rem;
+        right: 3rem;
+     }  
     }
     &__background{
         width: 6rem;
@@ -40,6 +47,14 @@
         -moz-transition: all .8s cubic-bezier(0.83, 0, 0.17, 1);
         -ms-transition: all .8s cubic-bezier(0.83, 0, 0.17, 1);
         -o-transition: all .8s cubic-bezier(0.83, 0, 0.17, 1);
+        @include respond(tab-small){
+            top: 4.5rem;
+            right: 4.5rem;
+        }  
+        @include respond(phone){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
 }
     &__nav{
         position: fixed;
@@ -59,6 +74,7 @@
     &__list{
         @include center-x-y;
         text-align: center;
+        width: 100%;
 }
     &__item{
         margin: 1rem;
@@ -114,7 +130,7 @@
         &::after{
             display: inline-block;
             width: 3rem;
-            height: .2rem;
+            height: 2px;
             background-color: #333;
            
         }

@@ -4,11 +4,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
   }
   html{
     /* font-size: 10px; to deal easily with rem */
     font-size: 62.5%; /* the same as 10px */ 
     scroll-behavior: smooth;
+    @include respond(tab-large){
+      font-size: 56.25%;  // 9px = 9/16
+    }
+    @include respond(tab-small){ 
+      font-size: 50%; //8px = 8/16
+    }
+    @include respond(desktop-large){ 
+      font-size: 75%;  //12px = 12/16
+    }
   }
   a{
     text-decoration: none;
@@ -16,3 +26,4 @@
   ul{
     list-style: none;
   }
+

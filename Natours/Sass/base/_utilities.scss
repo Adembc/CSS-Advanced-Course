@@ -6,9 +6,15 @@
 }
 .u-margin-btm-meduim{
    margin-bottom: 4rem;
+   @include respond(tab-small){
+      margin-bottom: 2.5rem;
+   }
 }
 .u-margin-btm-big{
    margin-bottom: 8rem;
+   @include respond(tab-small){
+      margin-bottom: 5.5rem;
+   }
 }
 .u-margin-top-meduim{
    margin-top: 4rem;
@@ -18,4 +24,7 @@
 }
 .u-margin-top-huge{
    margin-top: 10rem;
+   @include respond(tab-small){
+      margin-top: 7.5rem;
+   }
 }

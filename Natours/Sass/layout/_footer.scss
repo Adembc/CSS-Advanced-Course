@@ -3,7 +3,9 @@
     padding: 10rem 0;
     font-size: 1.4rem;
     color: $light-grey-1;
-
+    @include respond(tab-small){
+        padding: 8rem 0;
+    }
     &__logo-box{
         text-align: center;
     }
@@ -13,6 +15,10 @@
     }
     &__navigation{
         @include bordertop ; 
+        @include respond(tab-small){
+            width: 100%;
+            text-align: center;
+        }
     }
     &__item{
         display: inline-block;
@@ -46,5 +52,10 @@
         @include bordertop ; 
         width: 80%;
         float: right;
+        @include respond(tab-small){
+            width: 100%;
+            float: none;
+        }
     }
+
 }

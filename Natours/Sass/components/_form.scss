@@ -22,6 +22,9 @@
         -moz-border-radius: 2px;
         -ms-border-radius: 2px;
         -o-border-radius: 2px;
+        @include respond(tab-small){
+            width: 100%;
+        }
         &::placeholder{
             color: #999;
         }
@@ -61,6 +64,10 @@
         &-group{
         width: 49%;
         display: inline-block;
+        @include respond(tab-small){
+            width: 100%;
+            margin-bottom: 2rem;
+        }
         }
 
         &-label{

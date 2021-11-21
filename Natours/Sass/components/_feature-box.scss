@@ -14,6 +14,9 @@
     -moz-transition: all .2s;
     -ms-transition: all .2s;
     -o-transition: all .2s;
+    @include respond(tab-small){
+        padding: 2rem;
+    }
     &__icon{
         font-size: 6rem;
         margin-bottom: .5rem;
@@ -21,6 +24,9 @@
         background-image: linear-gradient(to right , $light-green,$dark-green);
         background-clip: text;
         -webkit-background-clip: text;
+        @include respond(tab-small){
+            margin-bottom: 0;
+        }
  
     }
     &:hover{

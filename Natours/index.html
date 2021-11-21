@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/icon-font.css" />
+    <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -76,9 +76,28 @@
           </div>
           <div class="col-1-of-2"> 
             <div class="composition">
-              <img src="img/nat-1-large.jpg" alt="photo 1" class="composition__photo composition__photo--left">
-              <img src="img/nat-2-large.jpg" alt="photo 2" class="composition__photo composition__photo--center">
-              <img src="img/nat-3-large.jpg" alt="photo 3" class="composition__photo composition__photo--right">
+
+              <img 
+              srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+              sizes="(max-width:900px) 20vw , (max-width:600px) 30vw , 300px" 
+              alt="photo 1"
+              class="composition__photo composition__photo--left"
+              src="img/nat-1-large.jpg"
+              >
+              <img 
+              srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+              sizes="(max-width:900px) 20vw , (max-width:600px) 30vw , 300px" 
+              alt="photo 2"
+              class="composition__photo composition__photo--center"
+              src="img/nat-2-large.jpg"
+              >
+              <img 
+              srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+              sizes="(max-width:900px) 20vw , (max-width:600px) 30vw , 300px" 
+              alt="photo 3"
+              class="composition__photo composition__photo--right"
+              src="img/nat-1-large.jpg"
+              >
             </div>
           </div>
         </div>
@@ -355,7 +374,10 @@
 
     <footer class="footer">
       <div class="footer__logo-box u-margin-btm-big">
-        <img src="img/logo-green-2x.png" alt="big logo" class="footer__logo">
+        <picture  class="footer__logo">
+          <source srcset="img/logo-green-small-1x.png 1x , img/logo-green-small-2x.png 2x " media="(max-width:37.5em)">
+          <img srcset=" img/logo-green-1x.png 1x ,  img/logo-green-2x.png 2x" alt="big logo">
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">

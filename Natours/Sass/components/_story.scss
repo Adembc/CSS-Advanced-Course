@@ -11,6 +11,19 @@
     -moz-transform: skewX(-12deg);
     -ms-transform: skewX(-12deg);
     -o-transform: skewX(-12deg);
+    @include respond(tab-small){
+        padding: 4rem;
+        padding-left: 7rem;
+        width: 100%;
+    }
+    @include respond(phone){
+        transform: skewX(0);
+        -webkit-transform: skewX(0);
+        -moz-transform: skewX(0);
+        -ms-transform: skewX(0);
+        -o-transform: skewX(0);
+}
+
     &__shape{
         width: 15rem;
         height: 15rem;
@@ -25,6 +38,14 @@
         -moz-transform: translateX(-3rem) skewX(12deg);
         -ms-transform: translateX(-3rem) skewX(12deg);
         -o-transform: translateX(-3rem) skewX(12deg);
+        @include respond(phone){
+            transform: translateX(-3rem) skewX(0);
+            -webkit-transform: translateX(-3rem) skewX(0);
+            -moz-transform: translateX(-3rem) skewX(0);
+            -ms-transform: translateX(-3rem) skewX(0);
+            -o-transform: translateX(-3rem) skewX(0);
+        }
+
 }
     &__text{
         transform: skewX(12deg);
@@ -34,7 +55,14 @@
         -o-transform: skewX(12deg);
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-}
+        @include respond(phone){
+      transform: skewX(0);
+      -webkit-transform: skewX(0);
+      -moz-transform: skewX(0);
+      -ms-transform: skewX(0);
+      -o-transform: skewX(0);
+    }
+    }
     &__img{
         height: 100%;
         transform: translateX(-4rem) scale(1.4);

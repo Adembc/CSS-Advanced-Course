@@ -4,13 +4,29 @@
 
     &:not(:last-child){
         margin-bottom: $row-gap;
+        @include respond(tab-small){
+            margin-bottom: $row-gap-small;
+        }
     }
+    @include respond(tab-small){
+        max-width: 50rem;
+        padding:  0 2rem ;
+    }
+
     @include clearfix;
     [class^="col-"]{
         float: left;
         &:not(:last-child){
             margin-right: $col-gap;
+            @include respond(tab-small){
+                margin-right: 0 ;
+                margin-bottom: $row-gap-small;
+            }
         }
+        @include respond(tab-small){
+            width: 100% !important;
+        }
+       
     }
     .col-1-of-2{   
       width: calc((100% - #{$col-gap}) / 2);

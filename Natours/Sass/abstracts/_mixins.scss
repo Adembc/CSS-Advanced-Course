@@ -20,3 +20,29 @@
     -ms-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
 }
+
+// Responsive manager
+/*
+
+- phone
+- tab-small
+- tab-large
+- desktop-large
+
+1em = 16px
+*/
+
+@mixin respond($devise) {
+    @if $devise == phone {
+        @media only scrren and (max-width : 37.5em){@content} ;
+    }
+    @if $devise == tab-small {
+        @media only scrren and (max-width : 56.25em){@content} ;
+    }
+    @if $devise == tab-large {
+        @media only scrren and (max-width : 75em){@content} ;
+    }
+    @if $devise == desktop-large {
+        @media only scrren and (min-width : 112.5em){@content} ;
+    }
+}

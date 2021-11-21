@@ -4,6 +4,9 @@ body {
     line-height: 1.7;
     color: $dark-grey;
     padding: 3rem;
+    @include respond(tab-small){
+      padding: 0;
+    }
   }
 .primary-heading {
     color: $white;
@@ -18,6 +21,10 @@ body {
       letter-spacing: 3.5rem;
       animation: moveInLeft 1s ease-in-out;
       -webkit-animation: moveInLeft 1s ease-in-out;
+      @include respond(phone){
+        font-size: 5rem;
+        letter-spacing: 1rem;
+      }
     }
     &--sub {
       display: block;
@@ -26,7 +33,11 @@ body {
       font-weight: 700;
       animation: moveInRight 1s ease-in-out;
       -webkit-animation: moveInRight 1s ease-in-out;
+      @include respond(phone){
+        letter-spacing: .5rem;
+      }
   } 
+
   }
   .secondary-heading{
     text-transform: uppercase;
@@ -45,6 +56,12 @@ body {
     -moz-transition: all .2s;
     -ms-transition: all .2s;
     -o-transition: all .2s;
+    @include respond(tab-small){
+      font-size: 3em;
+    }
+    @include respond(phone){
+      font-size: 2.5rem;
+    }
 
     &:hover{
       transform: skewY(2deg) skewX(15deg)  scale(1.1);
