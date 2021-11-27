@@ -11,40 +11,81 @@
         <title>trillo &mdash; Your all-in-one booking app</title>
     </head>
     <body>
+
         <div class="container">
+
             <header class="header">
                 <img src="img/logo.png" alt="" class="logo"> 
                 <form action="#" class="search">
-                    <input type="search" class="search__input">
+                    <input type="search" class="search__input" placeholder="Search hotels">
                     <button class="search__button">
                         <svg class="search__icon">
                             <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
                         </svg>
                     </button>
-                    <nav class="user-nav">
-                        <div class="user-nav__icon-box">
-                            <svg class="user-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-bookmark"></use>
-                            </svg>
-                            <span class="user-nav__notification">7</span>
-                        </div>
-                        <div class="user-nav__icon-box">
-                            <svg class="user-nav__icon">
-                                <use xlink:href="img/sprite.svg#icon-chat"></use>
-                            </svg>
-                            <span class="user-nav__notification">13</span>
-                        </div>
-                        <div class="user-nav__user">
-                            <img src="img/user.jpg" alt="usert photo" class="user-nav__user-photo">
-                            <span class="user-nav__user-name">Adem Bc </span>
-                        </div>
-                    </nav>
                 </form>
+                <nav class="user-nav">
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-nav__notification">7</span>
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav__notification">13</span>
+                    </div>
+                    <div class="user-nav__user">
+                        <img src="img/user.jpg" alt="usert photo" class="user-nav__user-photo">
+                        <span class="user-nav__user-name">Adem Bc </span>
+                    </div>
+                </nav>
             </header>
+
             <div class="content">
                 <aside class="sidebar">
-                    side-bar
+                    <ul class="side-nav">
+                        <li class="side-nav__item side-nav__item--active">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                                </svg>
+                                <span>Hotel</span>
+                            </a>
+                        </li>
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                                </svg>
+                                <span>Flight</span>
+                            </a>
+                        </li>
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-key"></use>
+                                </svg>
+                                <span>Car rentel</span>
+                            </a>
+                        </li>
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                                </svg>
+                                <span>Tours</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="legal">
+                        &copy; 2017 by Trillo . All rights reserved.  
+                    </div>
                 </aside>
+
+
                 <main class="hotel-view">
                     Hotel view
                 </main>

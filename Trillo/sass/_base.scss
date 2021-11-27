@@ -35,4 +35,12 @@ body{
     line-height: 1.6;
     background: linear-gradient(to right bottom , var(--primary-color-light) , var(--primary-color-dark));
     min-height: 100vh;
+    color: var(--grey-dark-2);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
