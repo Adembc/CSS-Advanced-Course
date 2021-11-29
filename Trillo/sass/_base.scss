@@ -18,7 +18,13 @@ COLORS
     --grey-dark-3: #999;
 
     --shadow-dark :  0 2rem 6rem rgba(0,0,0,.3);
+    --line : 1px solid var(--grey-light-2) ; 
 }
+$bk-largest : 75em ; //1200px
+$bk-large : 68.75em; //1100px
+$bk-meduim : 56.25em; //900px
+$bk-small : 37.5em; //600px
+$bk-smallest : 28.125em ;//450px
 *,
 *::after,
 ::before{
@@ -28,6 +34,9 @@ COLORS
 }
 html{
     font-size: 62.5%;
+    @media (max-width : $bk-large){
+        font-size: 50%;
+    }
 }
 body{
     font-family: 'Open Sans' , sans-serif;

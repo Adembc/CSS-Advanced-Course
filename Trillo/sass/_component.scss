@@ -7,6 +7,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media(max-width: $bk-smallest){
+        flex: 0 0 90%;
+        order: 1;
+    }
     &__input{
         font-family: inherit;
         font-size: inherit;
@@ -61,7 +65,7 @@
         }
     }
     &__icon-box{
-      position: relative;
+       position: relative;
     }
     &__icon{
         height: 2.25rem;
@@ -92,11 +96,22 @@
 .side-nav{
     margin-top: 3.5rem;
     font-size: 1.4rem;
+    @media(max-width: $bk-meduim){
+        display: flex;
+        margin: 0;
+    }
     &__item{
         position: relative;
         &:not(:last-child){
             margin-bottom: .5rem;
+            @media(max-width: $bk-meduim){
+                margin: 0;
+            }
         }
+        @media(max-width: $bk-meduim){
+            flex: 1;
+        }
+     
         &::before{
             content: "";
             position: absolute;
@@ -124,6 +139,14 @@
             display: flex;
             align-items: center;
             position: relative;
+            @media(max-width: $bk-meduim){
+                justify-content: center;
+                padding: 2rem;
+            }
+            @media(max-width: $bk-small){
+                flex-direction: column;
+                padding: 1.5rem .5rem;
+            }
         }
     }
     &__icon{
@@ -131,14 +154,338 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+        @media(max-width: $bk-small){
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
-    & > span{
 
-    }
+
 }
 .legal{
     font-size: 1.2rem;
     color: var(--grey-light-4);
     text-align: center;
     padding: 2.5rem;
+    @media(max-width: $bk-meduim){
+        display: none;
+    }
+}
+
+.gallery{
+    display: flex; 
+    &__photo{
+        display: block;
+        width: 100%;
+    }
+}
+.overview{
+    display: flex;
+    align-items: center;
+    border-bottom: var(--line);
+    @media(max-width : $bk-smallest){
+        justify-content: space-around;
+        flex-wrap: wrap; 
+    }
+   
+
+    &__heading{
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        padding: 1.5rem 3rem;
+        letter-spacing: 1px;
+        @media(max-width: $bk-small){
+         font-size: 1.8rem;
+         padding: 1.25rem 2rem;
+        }
+        @media(max-width : $bk-smallest){
+            flex : 0 0 100% ; 
+            font-size: 2.25rem;
+            text-align: center;
+        }
+        
+    }
+    &__stars{
+        margin-right: auto;
+        display: flex;
+        @media(max-width : $bk-smallest){
+            margin-right: 0;
+        }
+    }
+  
+    &__icon-star,
+    &__icon-location{
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--primary-color);
+    }
+    &__icon-location{
+        margin-right: .5rem;
+    }
+    &__location{
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+    &__rating{
+        background-color: var(--primary-color);
+        color: #fff;
+        margin-left: 3rem;
+        align-self: stretch;
+        padding: 0 2.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @media(max-width: $bk-small){
+            padding: 0 1.5rem;
+        }
+    }
+    &__rating-average{
+        font-size: 2.25rem;
+        font-weight: 300;
+        @media(max-width: $bk-small){
+            font-size: 1.8rem;
+        }
+    }
+
+    &__rating-count{
+        font-size: .8rem;
+        text-transform: uppercase;
+        @media(max-width: $bk-small){
+            font-size: .6rem;
+        }
+    }
+} 
+
+//btn
+
+.btn-inline{
+    display: inline-block;
+    font-size: inherit;
+    background-color: transparent;
+    color: var(--primary-color);
+    padding-bottom: 2px;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    cursor:pointer;
+    transition: color .2s;
+    & > span{
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+    // animation-name: pulsate;
+    // animation-duration: .8s;
+    // animation-iteration-count: infinite;
+    // animation-play-state: paused;
+
+    &:hover{
+        color: var(--grey-dark-1);
+        span{
+            margin-left: 8px;
+        }
+    }
+    &:focus{
+        outline: none;
+        // animation-play-state: running;
+        animation: pulsate .8s infinite;
+
+    }
+}
+
+@keyframes pulsate{
+    0%{
+        box-shadow: none;
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    }
+    100%{
+        box-shadow: none;
+        transform: scale(1);
+    }
+}
+
+//details 
+
+.paragraph:not(:last-of-type){
+    margin-bottom: 2rem;
+}
+.list{
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-bottom: var(--line);
+    border-top: var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item{
+        flex:  0 0 50%;
+        margin-bottom: .7rem;
+        &::before{
+            content: "";
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            margin-right: .7rem;
+
+            //old browser
+            // background-image: url("../img/chevron-thin-right.svg");
+            // background-size: cover;
+
+            //new browsers
+            background-color: var(--primary-color);
+            -webkit-mask-image: url("../img/chevron-thin-right.svg");
+            mask-image: url("../img/chevron-thin-right.svg");
+            -webkit-mask-size: cover;
+            mask-size: cover;
+        }
+    }
+}
+.recommend{
+    font-size: 1.3rem;
+    color: var(--grey-dark-3);
+    display: flex;
+    align-items: center;
+    &__count{
+        margin-right: auto; // or space-betwwen
+    }
+    &__friends{
+        display: flex;
+    }
+    &__photo{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-sizing: content-box;
+        &:not(:last-child){
+            margin-right: -2rem;
+        }
+        @media(max-width : $bk-smallest){
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}
+
+//reviews
+.review{
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,.1); 
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+    @media(max-width: $bk-meduim){
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+    &__text{
+        margin-bottom: 2rem;
+        position: relative;
+    }
+    &__user{
+        display: flex;
+        align-items: center;
+    }
+    &__user-photo{
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+    &__user-box{
+        margin-right: auto;
+    }
+    &__user-name{
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: .4rem;
+    }
+    &__user--date{
+        font-size: 1rem;
+        color: var(--grey-dark-3)
+    }
+    &__rating{
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: var(--primary-color);
+    }
+    &::before{
+        content: "\201C";
+        position: absolute;
+        top: -3rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        font-family: sans-serif;
+        color: var(--grey-light-2);
+    }
+}
+
+//cta
+.cta{
+    padding: 3.5rem 0;
+    text-align: center;
+    &__book{
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        @media(max-width : $bk-smallest){
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+    @media(max-width: $bk-meduim){
+        padding: 2.5rem 0 ;
+    }
+}
+
+.btn{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10rem;
+    color: #fff;
+    background-image: linear-gradient(to right, var(--primary-color-light), var(--primary-color-dark));
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s;
+    &__visible{
+        padding: 2rem 7.5rem;
+        transition: all .2s;
+    }
+    &__invisible{
+        padding: 2rem 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all .2s; 
+    }
+    &:hover{
+        background-image: linear-gradient(to left, var(--primary-color-light), var(--primary-color-dark));
+
+    }
+    &:hover &__visible{
+       transform: translateY(100%);
+    }
+    &:hover &__invisible{
+        top: 0;
+    }
+    &:focus{
+        outline: none;
+        animation: pulsate .8   s infinite;
+    }
 }
